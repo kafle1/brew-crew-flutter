@@ -3,16 +3,16 @@ import 'package:brew_crew/shared/constansts.dart';
 import 'package:brew_crew/shared/loading.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   final Function? toggleView;
 
-  SignIn({this.toggleView});
+  Register({this.toggleView});
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
@@ -31,14 +31,14 @@ class _SignInState extends State<SignIn> {
             appBar: AppBar(
               backgroundColor: Colors.brown[400],
               elevation: 0.0,
-              title: Text('Sigin in to Brew Crew'),
+              title: Text('Register in to Brew Crew'),
               actions: [
                 TextButton.icon(
                   onPressed: () {
                     widget.toggleView!();
                   },
                   label: Text(
-                    'Register',
+                    'Signin',
                     style: TextStyle(color: Colors.white),
                   ),
                   icon: Icon(
@@ -58,8 +58,7 @@ class _SignInState extends State<SignIn> {
                         height: 20,
                       ),
                       TextFormField(
-                        decoration:
-                            kTextFieldDecoration.copyWith(hintText: 'Email'),
+                        decoration: kTextFieldDecoration,
                         validator: (val) =>
                             val!.isEmpty ? 'Enter an email' : null,
                         onChanged: (newValue) {
@@ -95,21 +94,20 @@ class _SignInState extends State<SignIn> {
                             });
 
                             dynamic result = await _auth
-                                .signInWithEmailAndPassword(email, password);
+                                .registerWithEmailAndPassword(email, password);
 
                             if (result == null) {
                               setState(() {
                                 error =
-                                    'Could not sign in with those credentials';
+                                    'Error while registering. Supply valid email!';
                                 loading = false;
                               });
                             }
-
                             print(result);
                           }
                         },
                         child: Text(
-                          'Sign in',
+                          'Register',
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
