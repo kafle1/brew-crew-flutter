@@ -1,16 +1,37 @@
-# brew_crew
 
-A new Flutter project.
+# Brew Crew - Flutter App
 
-## Getting Started
+Brew Crew is an app that is used to keep the record of preference of coffee of different people. It is made to make use of Provider package with Firebase.
+## Preview
 
-This project is a starting point for a Flutter application.
+![App Screenshot](https://i.ibb.co/B6tgGCR/Screenshot-1636014169.png)
 
-A few resources to get you started if this is your first Flutter project:
+See Screenshots:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+[Image 1](https://i.ibb.co/B6tgGCR/Screenshot-1636014169.png), 
+[Image 2](https://i.ibb.co/8z6ShMH/Screenshot-1636014175.png),
+[Image 3](https://i.ibb.co/55wy575/Screenshot-1636014182.png)
+  
+## Tech Stack
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutter, Dart, Firebase, Provider Package
+
+  
+## Run Test
+
+1. Open your emulator from desired place. I prefer android studio virtual device.
+2. Then open the code with VS code / Android studio and press F5 in Vs code start app or Click on play button in android studio.
+
+ 
+ Enjoy!
+  
+## Developer
+
+- [@kafle1](https://www.github.com/kafle1)
+
+  
+## Support / Contact
+
+For support, email kafleniraj@gmail.com.
+
+  
